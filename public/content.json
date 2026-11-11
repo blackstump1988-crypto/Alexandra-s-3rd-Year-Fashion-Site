@@ -7,9 +7,15 @@
     {
       "id": "project-1",
       "number": "01",
-      "title": "Project One",
-      "subtitle": "Structure and Movement",
-      "description": "Add a short overview of the first project here. This can explain the idea, inspiration, materials or intended outcome.",
+      "title": "Mr Blobby The Constructed Man",
+      "subtitle": "Major Studio 2: Graduate Collection",
+      "description": "My collection explores the relationship between clothing, the body and masculinity, and how garments can alter, exaggerate and manipulate the perceived body.
+My research began with a women’s bustle from the Powerhouse Museum, dated 1870s. Made from cotton, steel and leather, its cage-like construction of nine concentric steel bands projects the body outward, showing that clothing doesn’t simply dress the body – it can actively construct and change the silhouette. The cage also collapses when the wearer sits, responding to the movement and physical needs of the body.
+The lines of these steel bands became the starting point for my textile investigation, with screen printing as my primary process. I use line not as decoration but as a tool to manipulate the body, letting it follow, interrupt, exaggerate or distort existing proportions. This connects to my second major reference, WWI dazzle ships, whose bold, disrupted geometry was designed to confuse the eye. I translate that idea from camouflaging a ship to creating visual confusion around the body, using warped lines to make areas appear wider, narrower, longer or more compressed.
+I’m interested in taking familiar menswear conventions and warping them, questioning whether a garment reveals the body or constructs it. This led me to Rei Kawakubo’s Comme des Garçons Spring 1997 collection, where she designed the body rather than simply clothes. Her distorted, padded forms challenge where the body should begin and end, and connect to my interest in the grotesque, deconstruction and the instability of the body.
+Through iterative collaging of the bustle and warped line designs, I developed ways to use construction and volume to physically alter the silhouette, while screen-printed line optically distorts it. These investigations became my final collection, Mr Blobby – The Constructed Man. Drawing on tailoring, streetwear and sportswear, it sets the grotesque and alien (Mr Blobby) against idealised masculine form (Arnold Schwarzenegger), playing with the tension between exaggerated and conventional masculinity.
+Ultimately, the collection playfully questions where the body ends and the garment begins, exploring clothing not just as something worn, but as something that can construct an entirely different physical identity.
+",
       "cover": "/photos/test-photo.jpeg",
       "theme": {"background":"#eee9df","surface":"#d8d0c2","text":"#171512","accent":"#9b2d22","style":"editorial"},
       "sections": {
@@ -19,7 +25,7 @@
       }
     },
     {
-      "id": "project-2", "number": "02", "title": "Project Two", "subtitle": "Colour and Identity", "description": "Add a short overview of the second project here.",
+      "id": "project-2", "number": "02", "title": "Nowhere, Elsewhere, Everywhere", "subtitle": "Major Studio 1: Menswear Capsule Collection", "description": "The flâneur, a nineteenth-century figure of urban observation, is reimagined within the contemporary city. No longer a detached spectator, he moves between identities, cultures and spaces; tracing connections through the urban landscape. Inspired by the work of Martine Rose and Wales Bonner, this collection explores hybridity: the intersection of person and place, body and environment. He follows paths to nowhere and everywhere, navigating the overlooked spaces between destinations. Cutting through the route not taken, he binds the fractured seams of the city together. He adorns the weathered posters, layered textures, and splattered murals; he becomes both observer and participant in the evolving urban fabric.",
       "cover": "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1800&q=88",
       "theme": {"background":"#1d2745","surface":"#2f3b62","text":"#fff8e8","accent":"#ff6a3d","style":"bold"},
       "sections": {
@@ -29,7 +35,7 @@
       }
     },
     {
-      "id": "project-3", "number": "03", "title": "Project Three", "subtitle": "Material and Memory", "description": "Add a short overview of the third project here.",
+      "id": "project-3", "number": "03", "title": "Soft Edges, Rough Corners", "subtitle": "Body Mapping Upcycled Capsule Collection", "description": "Add a short overview of the third project here.",
       "cover": "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=1800&q=88",
       "theme": {"background":"#ded7cc","surface":"#b8aa98","text":"#33271e","accent":"#48684d","style":"organic"},
       "sections": {
@@ -39,7 +45,7 @@
       }
     },
     {
-      "id": "project-4", "number": "04", "title": "Project Four", "subtitle": "Future Form", "description": "Add a short overview of the fourth project here.",
+      "id": "project-4", "number": "04", "title": "Tumble Forms", "subtitle": "Body Form Capsule Collection", "description": "Add a short overview of the fourth project here.",
       "cover": "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=88",
       "theme": {"background":"#101010","surface":"#262626","text":"#f4f4f1","accent":"#d8ff35","style":"minimal"},
       "sections": {
