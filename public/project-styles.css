@@ -3,7 +3,7 @@ body[data-project="project-1"] .gallery button:nth-child(4n+2).in-view{transform
 body[data-project="project-1"] .gallery button:nth-child(4n+3).in-view{transform:rotate(3deg)}
 body[data-project="project-1"] .gallery img{filter:grayscale(.08) drop-shadow(6px 7px 6px #0003)}
 body[data-project="project-1"] .section-header h1{font-style:italic}
-body[data-project="project-2"] .gallery button:nth-child(odd){outline:3px solid var(--accent,#ff6a3d);outline-offset:-3px}
+body[data-project="project-2"] .gallery button:nth-child(odd)
 body[data-project="project-2"] .section-header h1,body[data-project="project-2"] .project-hero h1{font-family:Arial,sans-serif;font-weight:900;text-transform:uppercase}
 body[data-project="project-3"] .gallery button:nth-child(3n+1).in-view{transform:rotate(-2deg)}
 body[data-project="project-3"] .gallery button:nth-child(3n+2).in-view{transform:rotate(2deg)}
