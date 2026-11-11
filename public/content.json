@@ -10,7 +10,7 @@
       "title": "Mr Blobby The Constructed Man",
       "subtitle": "Major Studio 2: Graduate Collection",
      "description": "The flâneur, a nineteenth-century figure of urban observation, is reimagined within the contemporary city. No longer a detached spectator, he moves between identities, cultures and spaces; tracing connections through the urban landscape. Inspired by the work of Martine Rose and Wales Bonner, this collection explores hybridity: the intersection of person and place, body and environment. He follows paths to nowhere and everywhere, navigating the overlooked spaces between destinations. Cutting through the route not taken, he binds the fractured seams of the city together. He adorns the weathered posters, layered textures, and splattered murals; he becomes both observer and participant in the evolving urban fabric.",
-      "cover": "/photos/test-photo.jpeg",
+      "cover": "/photos/project-1/photoshoot/IMG_1114.jpg",
       "theme": {"background":"#eee9df","surface":"#d8d0c2","text":"#171512","accent":"#9b2d22","style":"editorial"},
       "sections": {
         "process": {"label":"Process Work","text":"Add research notes, early ideas, fabric investigations, pattern development or construction decisions here.","images":[{"src":"https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1400&q=85","caption":"Research and development","alt":"Project one process work"}]},
