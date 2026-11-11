@@ -1,62 +1,53 @@
-/* Alexandra: dense, overlapping masonry contact sheet.
-   Replace ONLY public/layout.css. Uses natural image heights to avoid empty grid rows. */
+/* Balanced compact fashion contact sheet: visible breathing room, minimal scrolling. */
 .gallery {
-  display: block !important;
-  columns: 6 135px !important;
-  column-gap: 3px !important;
-  max-width: 1280px;
-  margin: 0 auto !important;
-  padding: 8px 0 24px !important;
-  overflow: visible !important;
-  isolation: isolate;
+  display:block!important;
+  columns:5 155px!important;
+  column-gap:14px!important;
+  max-width:1280px;
+  margin:0 auto!important;
+  padding:18px 0 35px!important;
+  overflow:visible!important;
+  isolation:isolate;
 }
-.gallery button,
-.gallery button:nth-child(n) {
-  display: inline-block !important;
-  position: relative !important;
-  vertical-align: top !important;
-  break-inside: avoid !important;
-  -webkit-column-break-inside: avoid !important;
-  width: 100% !important;
-  height: auto !important;
-  min-height: 0 !important;
-  aspect-ratio: auto !important;
-  margin: 0 0 -14px !important;
-  padding: 0 !important;
-  border: 0 !important;
-  background: transparent !important;
-  overflow: visible !important;
-  opacity: 1 !important;
-  transform: none !important;
-  transition: filter .25s ease !important;
-  z-index: 1;
+.gallery button,.gallery button:nth-child(n) {
+  display:inline-block!important;
+  position:relative!important;
+  vertical-align:top!important;
+  break-inside:avoid!important;
+  -webkit-column-break-inside:avoid!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:auto!important;
+  margin:0 0 12px!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  overflow:visible!important;
+  opacity:1!important;
+  transform:none!important;
+  z-index:1;
+  transition:filter .3s ease!important;
 }
-.gallery button:nth-child(5n+2) { margin-bottom: -22px !important; z-index: 3; }
-.gallery button:nth-child(7n+4) { margin-bottom: -18px !important; z-index: 4; }
-.gallery button img,
-.gallery button:nth-child(n) img {
-  display: block !important;
-  position: relative !important;
-  inset: auto !important;
-  width: 100% !important;
-  height: auto !important;
-  max-height: none !important;
-  object-fit: contain !important;
-  filter: drop-shadow(0 3px 5px rgba(0,0,0,.16));
-  transition: transform .3s ease, filter .3s ease !important;
+.gallery button img,.gallery button:nth-child(n) img {
+  display:block!important;
+  position:relative!important;
+  inset:auto!important;
+  width:100%!important;
+  height:auto!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  filter:drop-shadow(0 3px 5px rgba(0,0,0,.12));
+  transition:transform .3s ease!important;
 }
-.gallery button:hover { z-index: 30 !important; }
-.gallery button:hover img { transform: scale(1.07); filter: drop-shadow(0 8px 12px rgba(0,0,0,.24)); }
-/* Keep faded edges only for selected process work; never fade illustrations. */
+.gallery button:hover {z-index:20!important}
+.gallery button:hover img {transform:scale(1.035)}
 body[data-section="process"] .gallery button:nth-child(7n+1) img {
-  -webkit-mask-image: radial-gradient(ellipse 86% 88% at center,#000 78%,transparent 100%);
-  mask-image: radial-gradient(ellipse 86% 88% at center,#000 78%,transparent 100%);
+  -webkit-mask-image:radial-gradient(ellipse 89% 90% at center,#000 84%,transparent 100%);
+  mask-image:radial-gradient(ellipse 89% 90% at center,#000 84%,transparent 100%);
 }
-body[data-section="illustrations"] .gallery img {
-  -webkit-mask-image: none !important;
-  mask-image: none !important;
-}
-.gallery .caption { position: absolute; bottom: 0; left: 0; z-index: 8; background: var(--bg,#f1eee7); color: var(--text,#171717); font-size: 8px; padding: 3px 5px; }
-@media (max-width: 900px) { .gallery { columns: 4 125px !important; column-gap: 3px !important; } }
-@media (max-width: 520px) { .gallery { columns: 3 95px !important; column-gap: 2px !important; } .gallery button:nth-child(n) { margin-bottom: -8px !important; } }
-@media (prefers-reduced-motion: reduce) { .gallery button, .gallery img { transition: none !important; } }
+body[data-section="illustrations"] .gallery img {-webkit-mask-image:none!important;mask-image:none!important}
+.gallery .caption {position:absolute;bottom:0;left:0;z-index:8;background:var(--bg,#f1eee7);color:var(--text,#171717);font-size:9px;padding:5px 7px}
+@media(max-width:900px){.gallery{columns:4 140px!important;column-gap:12px!important}.gallery button:nth-child(n){margin-bottom:11px!important}}
+@media(max-width:520px){.gallery{columns:2 130px!important;column-gap:10px!important}.gallery button:nth-child(n){margin-bottom:10px!important}}
+@media(prefers-reduced-motion:reduce){.gallery button,.gallery img{transition:none!important}}
