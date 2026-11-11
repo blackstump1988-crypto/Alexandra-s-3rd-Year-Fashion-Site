@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "project-3", "number": "03", "title": "Soft Edges, Rough Corners", "subtitle": "Body Mapping Upcycled Capsule Collection", "description": "Add a short overview of the third project here.",
+      "id": "project-3", "number": "03", "title": "Soft Edges, Rough Corners", "subtitle": "Body Mapping Upcycled Capsule Collection", "description": "Soft edges rough corners text: Tensions & Intentions pulling, tearing, mending and making; narratives, stories; sentiments of wounded wovens, speaking through torn threads, stains of times passed. reforming, remoulding, reimagining the imagined; intentions eat into new tensions, new tears, new wounds. made new again, new but old, old but new. intention is in the tension; text maps the tensions of the body, mapped now in meanings from times passed, reforming, remoulding, reimagining. A rough and organic reimagining of streetwear aesthetics. Upcycled jersey and denim garments use texture, text and signs of wear as modes of communicating the concept “soft edges, rough corners” a hybrid collection that blurs boundaries between gender, form, the body and the vox populi’s identity.",
       "cover": "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=1800&q=88",
       "theme": {"background":"#ded7cc","surface":"#b8aa98","text":"#33271e","accent":"#48684d","style":"organic"},
       "sections": {
