@@ -1,13 +1,29 @@
-/* Alexandra: homepage imagery using the four existing project cover images. */
-.portfolio-intro{position:relative;grid-template-columns:minmax(0,1.7fr) minmax(260px,1fr);gap:clamp(24px,4vw,70px)}
-.portfolio-intro>.intro-art{grid-column:2;grid-row:1;position:relative;align-self:stretch;min-height:410px;isolation:isolate;pointer-events:none}
-.portfolio-intro>.intro-art img{position:absolute;width:53%;height:57%;object-fit:cover;box-shadow:0 12px 30px #0002;filter:saturate(.88);transition:transform .7s ease}
-.portfolio-intro>.intro-art img:nth-child(1){top:2%;left:0;transform:rotate(-7deg);z-index:1}
-.portfolio-intro>.intro-art img:nth-child(2){top:8%;right:0;transform:rotate(6deg);z-index:2}
-.portfolio-intro>.intro-art img:nth-child(3){bottom:7%;left:7%;transform:rotate(4deg);z-index:3}
-.portfolio-intro>.intro-art img:nth-child(4){bottom:2%;right:3%;transform:rotate(-5deg);z-index:4}
-.portfolio-intro>.intro-art:after{content:"";position:absolute;inset:48% -5% -5%;z-index:5;background:linear-gradient(transparent,var(--bg,#f1eee7) 90%);pointer-events:none}
-.portfolio-intro>p{grid-column:2;grid-row:1;position:relative;align-self:end;z-index:6;margin:0 0 0.5rem;padding:1rem 1.15rem;background:color-mix(in srgb,var(--bg,#f1eee7) 92%,transparent);backdrop-filter:blur(9px);color:var(--text,#171717);opacity:1!important;font-size:14px;line-height:1.7;border-left:2px solid var(--text,#171717);box-shadow:0 4px 15px #0001}
-.portfolio-intro>div:first-child{grid-column:1;grid-row:1;position:relative;z-index:7}
-@media(max-width:850px){.portfolio-intro{grid-template-columns:1fr;gap:15px}.portfolio-intro>div:first-child{grid-column:1;grid-row:1}.portfolio-intro>.intro-art{grid-column:1;grid-row:2;min-height:340px;max-width:620px;width:100%}.portfolio-intro>p{grid-column:1;grid-row:3;max-width:620px;margin:0;padding:14px 0;background:transparent;backdrop-filter:none;box-shadow:none;border:0}.portfolio-intro>.intro-art:after{inset:65% -5% -5%}}
-@media(prefers-reduced-motion:reduce){.portfolio-intro>.intro-art img{transition:none}}
+/* Alexandra: compact homepage introduction, preserving the four-image collage. */
+.portfolio-intro {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0,1.7fr) minmax(260px,1fr);
+  align-items: center;
+  gap: clamp(18px,3vw,45px);
+  min-height: 390px;
+  padding: 28px 5% 24px;
+}
+.portfolio-intro > div:first-child {grid-column:1;grid-row:1;position:relative;z-index:7;align-self:center}
+.portfolio-intro h1 {margin:16px 0 0;font-size:clamp(58px,9vw,132px);line-height:.82}
+.portfolio-intro > .intro-art {grid-column:2;grid-row:1;position:relative;align-self:center;min-height:320px;height:320px;isolation:isolate;pointer-events:none}
+.portfolio-intro > .intro-art img {position:absolute;width:53%;height:57%;object-fit:cover;box-shadow:0 10px 24px #0002;filter:saturate(.88);transition:transform .7s ease}
+.portfolio-intro > .intro-art img:nth-child(1) {top:1%;left:0;transform:rotate(-7deg);z-index:1}
+.portfolio-intro > .intro-art img:nth-child(2) {top:6%;right:0;transform:rotate(6deg);z-index:2}
+.portfolio-intro > .intro-art img:nth-child(3) {bottom:7%;left:7%;transform:rotate(4deg);z-index:3}
+.portfolio-intro > .intro-art img:nth-child(4) {bottom:2%;right:3%;transform:rotate(-5deg);z-index:4}
+.portfolio-intro > .intro-art:after {content:"";position:absolute;inset:47% -5% -5%;z-index:5;background:linear-gradient(transparent,var(--bg,#f1eee7) 95%);pointer-events:none}
+.portfolio-intro > p {grid-column:2;grid-row:1;position:relative;align-self:end;z-index:6;margin:0 0 5px;padding:12px 14px;background:color-mix(in srgb,var(--bg,#f1eee7) 94%,transparent);backdrop-filter:blur(9px);color:var(--text,#171717);opacity:1!important;font-size:13px;line-height:1.65;border-left:2px solid var(--text,#171717);box-shadow:0 4px 12px #0001}
+@media(max-width:850px) {
+  .portfolio-intro {grid-template-columns:1fr;min-height:0;padding:24px 5% 16px;gap:12px}
+  .portfolio-intro > div:first-child {grid-column:1;grid-row:1}
+  .portfolio-intro h1 {font-size:clamp(56px,12vw,100px)}
+  .portfolio-intro > .intro-art {grid-column:1;grid-row:2;min-height:220px;height:260px;max-width:580px;width:100%}
+  .portfolio-intro > p {grid-column:1;grid-row:3;max-width:580px;margin:0;padding:8px 0 12px;background:transparent;backdrop-filter:none;box-shadow:none;border:0}
+  .portfolio-intro > .intro-art:after {inset:65% -5% -5%}
+}
+@media(prefers-reduced-motion:reduce) {.portfolio-intro > .intro-art img {transition:none}}
