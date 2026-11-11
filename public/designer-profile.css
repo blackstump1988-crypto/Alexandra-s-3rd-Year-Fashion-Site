@@ -1,0 +1,12 @@
+/* Designer profile on the portfolio landing page. */
+.designer-profile{display:grid;grid-template-columns:minmax(230px,.8fr) minmax(0,1.8fr);gap:clamp(30px,6vw,90px);align-items:center;padding:clamp(45px,7vw,90px) 5%;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent);border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);background:color-mix(in srgb,var(--bg,#f1eee7) 92%,white 8%)}
+.designer-profile__portrait{position:relative;max-width:390px;justify-self:center}
+.designer-profile__portrait:before{content:"";position:absolute;inset:12px -12px -12px 12px;border:1px solid color-mix(in srgb,var(--text,#171717) 35%,transparent);z-index:0}
+.designer-profile__portrait img{position:relative;display:block;width:100%;aspect-ratio:4/5;object-fit:cover;z-index:1;filter:saturate(.9)}
+.designer-profile__content{max-width:800px}
+.designer-profile__eyebrow{display:block;margin-bottom:14px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;opacity:.55}
+.designer-profile h2{margin:0 0 24px;font:clamp(44px,6vw,84px)/.9 Georgia,serif;letter-spacing:-.055em}
+.designer-profile__text{columns:2;column-gap:clamp(25px,4vw,55px)}
+.designer-profile__text p{break-inside:avoid;margin:0 0 16px;font-size:15px;line-height:1.8;opacity:.76}
+.designer-profile--error{padding:30px 5%;font-size:13px;color:#8b283c}
+@media(max-width:800px){.designer-profile{grid-template-columns:1fr;gap:35px}.designer-profile__portrait{max-width:310px;justify-self:start}.designer-profile__text{columns:1}}
