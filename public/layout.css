@@ -1,0 +1,21 @@
+/* Alexandra portfolio: image-led layouts. Loaded after style.css. */
+.gallery{align-items:start;gap:clamp(12px,2vw,28px);grid-auto-flow:row dense}
+.gallery button{height:auto;min-height:0;aspect-ratio:3/4;background:var(--surface,#e5e0d8);overflow:hidden}
+.gallery img{object-fit:contain;object-position:center;transition:transform .35s ease}
+.gallery button:hover img{transform:scale(1.015)}
+/* Different visual rhythms for each section; no cropping of artwork. */
+body[data-section="process"] .gallery{grid-template-columns:repeat(12,minmax(0,1fr))}
+body[data-section="process"] .gallery button{grid-column:span 4;aspect-ratio:4/5}
+body[data-section="process"] .gallery button:nth-child(5n+1){grid-column:span 8;aspect-ratio:8/5}
+body[data-section="illustrations"] .gallery{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}
+body[data-section="illustrations"] .gallery button,body[data-section="illustrations"] .gallery button:nth-child(3n+1){grid-column:auto;aspect-ratio:3/4;padding:14px}
+body[data-section="illustrations"] .gallery img{position:static;display:block;width:100%;height:100%;object-fit:contain}
+body[data-section="photoshoot"] .gallery{grid-template-columns:repeat(12,minmax(0,1fr))}
+body[data-section="photoshoot"] .gallery button{grid-column:span 4;aspect-ratio:3/4}
+body[data-section="photoshoot"] .gallery button:nth-child(6n+1){grid-column:span 8;aspect-ratio:4/3}
+body[data-section="photoshoot"] .gallery button:nth-child(6n+4){grid-column:span 8;aspect-ratio:4/3}
+body[data-section="photoshoot"] .gallery img{object-fit:contain}
+/* Keep captions outside the artwork area visually restrained. */
+.gallery .caption{z-index:2;max-width:100%;background:var(--bg,#f1eee7);color:var(--text,#171717)}
+@media(max-width:800px){body[data-section] .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}body[data-section] .gallery button,body[data-section] .gallery button:nth-child(n){grid-column:span 1;aspect-ratio:3/4}body[data-section="process"] .gallery button:nth-child(5n+1),body[data-section="photoshoot"] .gallery button:nth-child(6n+1){grid-column:span 2;aspect-ratio:4/3}}
+@media(max-width:520px){body[data-section] .gallery{grid-template-columns:1fr}body[data-section] .gallery button,body[data-section] .gallery button:nth-child(n){grid-column:span 1;aspect-ratio:3/4}body[data-section="illustrations"] .gallery button{padding:8px}}
