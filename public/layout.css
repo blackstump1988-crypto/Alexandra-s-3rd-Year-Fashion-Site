@@ -1,19 +1,62 @@
-/* Ultra-tight contact-sheet layout: many small images, compact overlapping rows. */
-.gallery{display:grid!important;grid-template-columns:repeat(20,minmax(0,1fr))!important;gap:0!important;max-width:1100px;margin:0 auto;padding:6px 0 18px!important;align-items:center;overflow:visible!important;isolation:isolate}
-.gallery button,.gallery button:nth-child(n){position:relative!important;display:block!important;grid-column:span 3!important;height:auto!important;min-height:0!important;aspect-ratio:4/5!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;overflow:visible!important;opacity:0;transform:translateY(9px);transition:opacity .5s ease,transform .6s ease;z-index:1}
-.gallery button.in-view{opacity:1;transform:translateY(0)}
-/* Compact six-column visual rhythm, deliberately intersecting neighbouring columns. */
-.gallery button:nth-child(6n+1){grid-column:1/span 4!important;z-index:2}
-.gallery button:nth-child(6n+2){grid-column:4/span 4!important;margin-top:-38%!important;z-index:5}
-.gallery button:nth-child(6n+3){grid-column:7/span 4!important;margin-top:-45%!important;z-index:3}
-.gallery button:nth-child(6n+4){grid-column:10/span 4!important;margin-top:-35%!important;z-index:6}
-.gallery button:nth-child(6n+5){grid-column:13/span 4!important;margin-top:-45%!important;z-index:4}
-.gallery button:nth-child(6n){grid-column:16/span 4!important;margin-top:-40%!important;z-index:7}
-.gallery button img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:contain!important;filter:drop-shadow(0 4px 6px #0003);transition:transform .4s ease}
-.gallery button:hover{z-index:30!important}.gallery button:hover img{transform:scale(1.09)}
-body[data-section="process"] .gallery button:nth-child(5n+1) img{-webkit-mask-image:radial-gradient(ellipse 85% 86% at center,#000 77%,transparent 100%);mask-image:radial-gradient(ellipse 85% 86% at center,#000 77%,transparent 100%)}
-body[data-section="illustrations"] .gallery img{-webkit-mask-image:none!important;mask-image:none!important}
-.gallery .caption{z-index:8;background:var(--bg,#f1eee7);color:var(--text,#171717);font-size:8px;padding:4px 6px}
-@media(max-width:850px){.gallery{grid-template-columns:repeat(12,minmax(0,1fr))!important}.gallery button:nth-child(n){grid-column:span 4!important;margin:0!important}.gallery button:nth-child(3n+1){grid-column:1/span 5!important}.gallery button:nth-child(3n+2){grid-column:5/span 5!important;margin-top:-25%!important}.gallery button:nth-child(3n){grid-column:9/span 4!important;margin-top:-25%!important}}
-@media(max-width:520px){.gallery{grid-template-columns:repeat(8,minmax(0,1fr))!important}.gallery button:nth-child(n){grid-column:1/span 4!important;margin:0!important}.gallery button:nth-child(even){grid-column:4/span 4!important;margin-top:-22%!important}}
-@media(prefers-reduced-motion:reduce){.gallery button:nth-child(n){opacity:1!important;transform:none!important;transition:none!important}.gallery img{transition:none!important}}
+/* Alexandra: dense, overlapping masonry contact sheet.
+   Replace ONLY public/layout.css. Uses natural image heights to avoid empty grid rows. */
+.gallery {
+  display: block !important;
+  columns: 6 135px !important;
+  column-gap: 3px !important;
+  max-width: 1280px;
+  margin: 0 auto !important;
+  padding: 8px 0 24px !important;
+  overflow: visible !important;
+  isolation: isolate;
+}
+.gallery button,
+.gallery button:nth-child(n) {
+  display: inline-block !important;
+  position: relative !important;
+  vertical-align: top !important;
+  break-inside: avoid !important;
+  -webkit-column-break-inside: avoid !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: auto !important;
+  margin: 0 0 -14px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: filter .25s ease !important;
+  z-index: 1;
+}
+.gallery button:nth-child(5n+2) { margin-bottom: -22px !important; z-index: 3; }
+.gallery button:nth-child(7n+4) { margin-bottom: -18px !important; z-index: 4; }
+.gallery button img,
+.gallery button:nth-child(n) img {
+  display: block !important;
+  position: relative !important;
+  inset: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,.16));
+  transition: transform .3s ease, filter .3s ease !important;
+}
+.gallery button:hover { z-index: 30 !important; }
+.gallery button:hover img { transform: scale(1.07); filter: drop-shadow(0 8px 12px rgba(0,0,0,.24)); }
+/* Keep faded edges only for selected process work; never fade illustrations. */
+body[data-section="process"] .gallery button:nth-child(7n+1) img {
+  -webkit-mask-image: radial-gradient(ellipse 86% 88% at center,#000 78%,transparent 100%);
+  mask-image: radial-gradient(ellipse 86% 88% at center,#000 78%,transparent 100%);
+}
+body[data-section="illustrations"] .gallery img {
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+.gallery .caption { position: absolute; bottom: 0; left: 0; z-index: 8; background: var(--bg,#f1eee7); color: var(--text,#171717); font-size: 8px; padding: 3px 5px; }
+@media (max-width: 900px) { .gallery { columns: 4 125px !important; column-gap: 3px !important; } }
+@media (max-width: 520px) { .gallery { columns: 3 95px !important; column-gap: 2px !important; } .gallery button:nth-child(n) { margin-bottom: -8px !important; } }
+@media (prefers-reduced-motion: reduce) { .gallery button, .gallery img { transition: none !important; } }
