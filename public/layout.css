@@ -1,70 +1,20 @@
-/* Alexandra fashion portfolio: genuine layered gallery compositions.
-   Replace the existing public/layout.css with this file.
-   Retains all existing R2 image loading and scroll animation. */
-.gallery {
-  display:grid!important;
-  grid-template-columns:repeat(12,minmax(0,1fr))!important;
-  column-gap:0!important;
-  row-gap:0!important;
-  align-items:center;
-  padding:60px 0 110px!important;
-  overflow:visible!important;
-  isolation:isolate;
-}
-.gallery button,
-.gallery button:nth-child(3n+1) {
-  position:relative!important;
-  display:block;
-  height:auto!important;
-  min-height:0!important;
-  padding:0!important;
-  border:0;
-  background:transparent!important;
-  overflow:visible!important;
-  grid-column:2 / span 7!important;
-  aspect-ratio:4/5;
-  margin:0!important;
-  z-index:1;
-  opacity:0;
-  transform:translateY(55px);
-  transition:opacity .9s ease,transform 1s cubic-bezier(.2,.7,.2,1);
-}
-.gallery button.in-view {opacity:1;transform:translateY(0)}
-/* Overlap achieved by shared grid rows, not just margins. */
-.gallery button:nth-child(4n+1),
-.gallery button:nth-child(4n+2) {grid-row:auto;}
-.gallery button:nth-child(4n+1){grid-column:1 / span 9!important;aspect-ratio:5/4;z-index:1}
-.gallery button:nth-child(4n+2){grid-column:8 / span 5!important;aspect-ratio:3/4;margin-top:-48%!important;z-index:4}
-.gallery button:nth-child(4n+3){grid-column:2 / span 5!important;aspect-ratio:3/4;margin-top:-18%!important;z-index:3}
-.gallery button:nth-child(4n){grid-column:6 / span 7!important;aspect-ratio:5/4;margin-top:-38%!important;z-index:2}
-.gallery button img {
-  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
-  object-fit:contain!important;object-position:center;
-  filter:drop-shadow(0 16px 20px rgba(0,0,0,.18));
-  transition:transform .65s ease,filter .65s ease;
-}
-.gallery button:hover{z-index:8}
-.gallery button:hover img{transform:scale(1.04) rotate(.5deg);filter:drop-shadow(0 24px 30px rgba(0,0,0,.25))}
-/* Soft faded edges only for selected process work. Illustrations stay crisp. */
-body[data-section="process"] .gallery button:nth-child(3n+1) img {
-  -webkit-mask-image:radial-gradient(ellipse 76% 78% at center,#000 69%,transparent 100%);
-  mask-image:radial-gradient(ellipse 76% 78% at center,#000 69%,transparent 100%);
-}
-body[data-section="illustrations"] .gallery button img {filter:drop-shadow(0 12px 16px rgba(0,0,0,.10))}
-body[data-section="photoshoot"] .gallery button:nth-child(4n+1){grid-column:1 / span 10!important;aspect-ratio:16/10}
-body[data-section="photoshoot"] .gallery button:nth-child(4n+2){grid-column:8 / span 5!important;margin-top:-40%!important}
-.gallery .caption{z-index:6;max-width:95%;background:var(--bg,#f1eee7);color:var(--text,#171717);padding:9px 13px;font-size:9px;letter-spacing:.13em}
-@media(max-width:800px){
- .gallery{grid-template-columns:repeat(6,minmax(0,1fr))!important;padding:30px 0 70px!important}
- .gallery button:nth-child(n),body[data-section="photoshoot"] .gallery button:nth-child(n){grid-column:1 / span 5!important;aspect-ratio:4/5;margin:0!important}
- .gallery button:nth-child(even),body[data-section="photoshoot"] .gallery button:nth-child(even){grid-column:3 / span 4!important;margin-top:-20%!important}
-}
-@media(max-width:520px){
- .gallery{grid-template-columns:repeat(6,minmax(0,1fr))!important}
- .gallery button:nth-child(n),body[data-section="photoshoot"] .gallery button:nth-child(n){grid-column:1 / span 5!important;aspect-ratio:4/5}
- .gallery button:nth-child(even),body[data-section="photoshoot"] .gallery button:nth-child(even){grid-column:3 / span 4!important;margin-top:-12%!important}
-}
-@media(prefers-reduced-motion:reduce){
- .gallery button:nth-child(n){transition:none!important;opacity:1!important;transform:none!important}
- .gallery button img{transition:none!important}
-}
+/* Compact, overlapping editorial contact sheet for Alexandra's portfolio. */
+.gallery{display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;gap:0!important;align-items:center;padding:32px 3% 65px!important;overflow:visible!important;isolation:isolate}
+.gallery button,.gallery button:nth-child(3n+1){position:relative!important;display:block!important;height:auto!important;min-height:0!important;padding:0!important;border:0!important;background:transparent!important;overflow:visible!important;grid-column:2/span 4!important;aspect-ratio:3/4;margin:0!important;z-index:1;opacity:0;transform:translateY(25px);transition:opacity .75s ease,transform .8s ease}
+.gallery button.in-view{opacity:1;transform:translateY(0)}
+/* Small, tightly clustered images. Overlap comes from negative vertical margins and intersecting columns. */
+.gallery button:nth-child(6n+1){grid-column:2/span 4!important;aspect-ratio:4/5;z-index:2}
+.gallery button:nth-child(6n+2){grid-column:5/span 3!important;aspect-ratio:3/4;margin-top:-28%!important;z-index:4}
+.gallery button:nth-child(6n+3){grid-column:8/span 4!important;aspect-ratio:4/5;margin-top:-17%!important;z-index:3}
+.gallery button:nth-child(6n+4){grid-column:3/span 3!important;aspect-ratio:3/4;margin-top:-34%!important;z-index:5}
+.gallery button:nth-child(6n+5){grid-column:6/span 4!important;aspect-ratio:4/5;margin-top:-30%!important;z-index:2}
+.gallery button:nth-child(6n){grid-column:9/span 3!important;aspect-ratio:3/4;margin-top:-35%!important;z-index:6}
+.gallery button img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:contain!important;filter:drop-shadow(0 8px 12px rgba(0,0,0,.13));transition:transform .6s ease,filter .6s ease}
+.gallery button:hover{z-index:20!important}.gallery button:hover img{transform:scale(1.07);filter:drop-shadow(0 14px 18px rgba(0,0,0,.22))}
+body[data-section="process"] .gallery button:nth-child(4n+1) img{-webkit-mask-image:radial-gradient(ellipse 80% 82% at center,#000 72%,transparent 100%);mask-image:radial-gradient(ellipse 80% 82% at center,#000 72%,transparent 100%)}
+body[data-section="illustrations"] .gallery button img{-webkit-mask-image:none;mask-image:none}
+body[data-section="photoshoot"] .gallery button:nth-child(6n+1){grid-column:2/span 5!important;aspect-ratio:4/5}
+.gallery .caption{z-index:10;background:var(--bg,#f1eee7);color:var(--text,#171717);padding:7px 10px;font-size:9px;letter-spacing:.12em}
+@media(max-width:800px){.gallery{grid-template-columns:repeat(8,minmax(0,1fr))!important;padding:25px 0 50px!important}.gallery button:nth-child(n),body[data-section="photoshoot"] .gallery button:nth-child(n){grid-column:2/span 4!important;aspect-ratio:3/4;margin:0!important}.gallery button:nth-child(even),body[data-section="photoshoot"] .gallery button:nth-child(even){grid-column:5/span 3!important;margin-top:-22%!important}}
+@media(max-width:520px){.gallery{grid-template-columns:repeat(6,minmax(0,1fr))!important}.gallery button:nth-child(n),body[data-section="photoshoot"] .gallery button:nth-child(n){grid-column:1/span 4!important;aspect-ratio:3/4;margin:0!important}.gallery button:nth-child(even),body[data-section="photoshoot"] .gallery button:nth-child(even){grid-column:4/span 3!important;margin-top:-16%!important}}
+@media(prefers-reduced-motion:reduce){.gallery button:nth-child(n){transition:none!important;opacity:1!important;transform:none!important}.gallery button img{transition:none!important}}
