@@ -1,15 +1,87 @@
-/* Individual project treatments. Loaded AFTER layout.css. */
-body[data-project="project-1"] .gallery button:nth-child(4n+2).in-view{transform:rotate(-4deg)}
-body[data-project="project-1"] .gallery button:nth-child(4n+3).in-view{transform:rotate(3deg)}
-body[data-project="project-1"] .gallery img{filter:grayscale(.08) drop-shadow(6px 7px 6px #0003)}
-body[data-project="project-1"] .section-header h1{font-style:italic}
-body[data-project="project-2"] .gallery button:nth-child(odd)
-body[data-project="project-2"] .section-header h1,body[data-project="project-2"] .project-hero h1{font-family:Arial,sans-serif;font-weight:900;text-transform:uppercase}
-body[data-project="project-3"] .gallery button:nth-child(3n+1).in-view{transform:rotate(-2deg)}
-body[data-project="project-3"] .gallery button:nth-child(3n+2).in-view{transform:rotate(2deg)}
-body[data-project="project-3"] .gallery img{filter:sepia(.07) drop-shadow(0 6px 10px #0002)}
-body[data-project="project-3"] .section-header h1{font-style:italic}
-body[data-project="project-4"] .gallery button{outline:1px solid color-mix(in srgb,var(--text) 30%,transparent);outline-offset:2px}
-body[data-project="project-4"] .section-header h1,body[data-project="project-4"] .project-hero h1{font-family:Arial,sans-serif;font-weight:300;text-transform:uppercase;letter-spacing:.02em}
-body[data-section="illustrations"] .gallery img{-webkit-mask-image:none!important;mask-image:none!important;object-fit:contain!important}
-@media(prefers-reduced-motion:reduce){body[data-project] .gallery button.in-view{transform:none!important}}
+/* Four art directions. Loaded after style.css and layout.css.
+   All rules are scoped to a project. Gallery density and R2 images are unchanged. */
+
+/* PROJECT 1: Urban flaneur: paper, ink, burgundy, expressive serif. */
+body[data-project="project-1"] {
+  --bg:#e8dfcf !important; --surface:#cfc1aa !important;
+  --text:#201d1a !important; --accent:#8b283c !important;
+  background:var(--bg) !important;color:var(--text) !important;
+}
+body[data-project="project-1"] .site-header {background:#e8dfcff0 !important}
+body[data-project="project-1"] .project-hero h1,
+body[data-project="project-1"] .section-header h1,
+body[data-project="project-1"] .chapter h2 {
+  font-family:Georgia,'Times New Roman',serif !important;
+  font-weight:400 !important;font-style:italic !important;
+  letter-spacing:-.07em !important;text-transform:none !important;
+}
+body[data-project="project-1"] .eyebrow {color:var(--accent) !important;font-weight:700}
+body[data-project="project-1"] .gallery button:nth-child(4n+2) img {transform:rotate(-3deg)}
+body[data-project="project-1"] .gallery button:nth-child(4n+3) img {transform:rotate(2deg)}
+
+/* PROJECT 2: Graphic pop: deep cobalt, electric orange, heavy grotesque. */
+body[data-project="project-2"] {
+  --bg:#172a64 !important; --surface:#29448c !important;
+  --text:#fff9e9 !important; --accent:#ff713e !important;
+  background:var(--bg) !important;color:var(--text) !important;
+}
+body[data-project="project-2"] .site-header {background:#172a64f0 !important}
+body[data-project="project-2"] .project-hero h1,
+body[data-project="project-2"] .section-header h1,
+body[data-project="project-2"] .chapter h2 {
+  font-family:Impact,'Arial Black',Arial,sans-serif !important;
+  font-weight:900 !important;font-style:normal !important;
+  text-transform:uppercase !important;letter-spacing:-.035em !important;
+}
+body[data-project="project-2"] .eyebrow,
+body[data-project="project-2"] .chapter-link {color:var(--accent) !important;font-weight:700}
+body[data-project="project-2"] .gallery button {outline:none !important}
+body[data-project="project-2"] .gallery button img {filter:drop-shadow(5px 6px 0 #ff713e55)}
+
+/* PROJECT 3: Material and memory: sage, warm stone, elegant humanist serif. */
+body[data-project="project-3"] {
+  --bg:#e3e2d5 !important; --surface:#c3c9b8 !important;
+  --text:#263b32 !important; --accent:#a36a4d !important;
+  background:var(--bg) !important;color:var(--text) !important;
+}
+body[data-project="project-3"] .site-header {background:#e3e2d5f0 !important}
+body[data-project="project-3"] .project-hero h1,
+body[data-project="project-3"] .section-header h1,
+body[data-project="project-3"] .chapter h2 {
+  font-family:'Palatino Linotype',Palatino,Georgia,serif !important;
+  font-weight:400 !important;font-style:normal !important;
+  text-transform:none !important;letter-spacing:-.045em !important;
+}
+body[data-project="project-3"] .eyebrow {color:var(--accent) !important}
+body[data-project="project-3"] .gallery button img {filter:sepia(.09) drop-shadow(0 4px 7px #0002)}
+
+/* PROJECT 4: Experimental exhibition: near-black, ivory, acid-lime, light mono. */
+body[data-project="project-4"] {
+  --bg:#101313 !important; --surface:#252a29 !important;
+  --text:#f0f0e8 !important; --accent:#caff39 !important;
+  background:var(--bg) !important;color:var(--text) !important;
+}
+body[data-project="project-4"] .site-header {background:#101313f0 !important}
+body[data-project="project-4"] .project-hero h1,
+body[data-project="project-4"] .section-header h1,
+body[data-project="project-4"] .chapter h2 {
+  font-family:'Courier New',Courier,monospace !important;
+  font-weight:400 !important;font-style:normal !important;
+  text-transform:uppercase !important;letter-spacing:-.065em !important;
+}
+body[data-project="project-4"] .eyebrow,
+body[data-project="project-4"] .chapter-link {color:var(--accent) !important}
+body[data-project="project-4"] .gallery button {outline:0 !important}
+body[data-project="project-4"] .gallery button img {filter:drop-shadow(0 5px 9px #0009)}
+
+/* Preserve legibility of white text over hero photos in every project. */
+body[data-project] .project-hero-content,
+body[data-project] .project-hero-content .eyebrow {color:#fff !important}
+body[data-project] .gallery .caption {background:var(--bg) !important;color:var(--text) !important}
+body[data-project] .chapter {background:var(--surface) !important}
+@media(max-width:700px) {
+  body[data-project] .section-header h1 {overflow-wrap:anywhere}
+}
+@media(prefers-reduced-motion:reduce) {
+  body[data-project] .gallery button img {transition:none !important}
+}
