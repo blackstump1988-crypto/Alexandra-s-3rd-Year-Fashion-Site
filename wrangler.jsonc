@@ -1,17 +1,7 @@
 {
-  "name": "alexandra-fashion-portfolio",
+  "name": "alexandra-s-3rd-year-fashion-site",
   "main": "worker.js",
   "compatibility_date": "2026-11-11",
-
-  "assets": {
-    "directory": "./public",
-    "binding": "ASSETS"
-  },
-
-  "r2_buckets": [
-    {
-      "binding": "PHOTOS",
-      "bucket_name": "fashion-images"
-    }
-  ]
+  "assets": { "directory": "./public", "binding": "ASSETS", "run_worker_first": ["/photos/*"] },
+  "r2_buckets": [{ "binding": "PHOTOS", "bucket_name": "fashion-images" }]
 }

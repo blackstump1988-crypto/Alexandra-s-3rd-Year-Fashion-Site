@@ -1,0 +1,52 @@
+{
+  "owner": "Alexandra",
+  "title": "Fashion Portfolio",
+  "year": "2026",
+  "introduction": "A selected portfolio of four projects exploring research, form, material, illustration and final fashion outcomes.",
+  "projects": [
+    {
+      "id": "project-1",
+      "number": "01",
+      "title": "Project One",
+      "subtitle": "Structure and Movement",
+      "description": "Add a short overview of the first project here. This can explain the idea, inspiration, materials or intended outcome.",
+      "cover": "/photos/test-photo.jpeg",
+      "theme": {"background":"#eee9df","surface":"#d8d0c2","text":"#171512","accent":"#9b2d22","style":"editorial"},
+      "sections": {
+        "process": {"label":"Process Work","text":"Add research notes, early ideas, fabric investigations, pattern development or construction decisions here.","images":[{"src":"https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1400&q=85","caption":"Research and development","alt":"Project one process work"}]},
+        "illustrations": {"label":"Final Illustrations","text":"Add a short explanation of the resolved silhouettes, colour decisions and final illustrated looks.","images":[{"src":"https://images.unsplash.com/photo-1543076447-215ad9ba6923?auto=format&fit=crop&w=1200&q=85","caption":"Final Illustration 01","alt":"Project one final illustration"}]},
+        "photoshoot": {"label":"Final Photoshoot","text":"Add a final statement, credits or notes about the photographic presentation.","images":[{"src":"/photos/test-photo.jpeg","caption":"Final Collection","alt":"Project one final photoshoot"}]}
+      }
+    },
+    {
+      "id": "project-2", "number": "02", "title": "Project Two", "subtitle": "Colour and Identity", "description": "Add a short overview of the second project here.",
+      "cover": "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1800&q=88",
+      "theme": {"background":"#1d2745","surface":"#2f3b62","text":"#fff8e8","accent":"#ff6a3d","style":"bold"},
+      "sections": {
+        "process":{"label":"Process Work","text":"Add Project Two process notes here.","images":[{"src":"https://images.unsplash.com/photo-1558171813-4c088753af8f?auto=format&fit=crop&w=1200&q=85","caption":"Process Study 01","alt":"Project two process work"}]},
+        "illustrations":{"label":"Final Illustrations","text":"Add Project Two illustration notes here.","images":[{"src":"https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1200&q=85","caption":"Final Illustration 01","alt":"Project two final illustration"}]},
+        "photoshoot":{"label":"Final Photoshoot","text":"Add Project Two final photoshoot notes and credits here.","images":[{"src":"https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1300&q=88","caption":"Final Look 01","alt":"Project two final photoshoot"}]}
+      }
+    },
+    {
+      "id": "project-3", "number": "03", "title": "Project Three", "subtitle": "Material and Memory", "description": "Add a short overview of the third project here.",
+      "cover": "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=1800&q=88",
+      "theme": {"background":"#ded7cc","surface":"#b8aa98","text":"#33271e","accent":"#48684d","style":"organic"},
+      "sections": {
+        "process":{"label":"Process Work","text":"Add Project Three process notes here.","images":[{"src":"https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1200&q=85","caption":"Process Study 01","alt":"Project three process work"}]},
+        "illustrations":{"label":"Final Illustrations","text":"Add Project Three illustration notes here.","images":[{"src":"https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=1200&q=85","caption":"Final Illustration 01","alt":"Project three final illustration"}]},
+        "photoshoot":{"label":"Final Photoshoot","text":"Add Project Three final photoshoot notes and credits here.","images":[{"src":"https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1300&q=88","caption":"Final Look 01","alt":"Project three final photoshoot"}]}
+      }
+    },
+    {
+      "id": "project-4", "number": "04", "title": "Project Four", "subtitle": "Future Form", "description": "Add a short overview of the fourth project here.",
+      "cover": "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=88",
+      "theme": {"background":"#101010","surface":"#262626","text":"#f4f4f1","accent":"#d8ff35","style":"minimal"},
+      "sections": {
+        "process":{"label":"Process Work","text":"Add Project Four process notes here.","images":[{"src":"https://images.unsplash.com/photo-1558171813-4c088753af8f?auto=format&fit=crop&w=1200&q=85","caption":"Process Study 01","alt":"Project four process work"}]},
+        "illustrations":{"label":"Final Illustrations","text":"Add Project Four illustration notes here.","images":[{"src":"https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1200&q=85","caption":"Final Illustration 01","alt":"Project four final illustration"}]},
+        "photoshoot":{"label":"Final Photoshoot","text":"Add Project Four final photoshoot notes and credits here.","images":[{"src":"https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1300&q=88","caption":"Final Look 01","alt":"Project four final photoshoot"}]}
+      }
+    }
+  ]
+}
