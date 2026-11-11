@@ -20,7 +20,7 @@
     },
     {
       "id": "project-2", "number": "02", "title": "Nowhere, Elsewhere, Everywhere", "subtitle": "Major Studio 1: Menswear Capsule Collection", "description": "The flâneur, a nineteenth-century figure of urban observation, is reimagined within the contemporary city. No longer a detached spectator, he moves between identities, cultures and spaces; tracing connections through the urban landscape. Inspired by the work of Martine Rose and Wales Bonner, this collection explores hybridity: the intersection of person and place, body and environment. He follows paths to nowhere and everywhere, navigating the overlooked spaces between destinations. Cutting through the route not taken, he binds the fractured seams of the city together. He adorns the weathered posters, layered textures, and splattered murals; he becomes both observer and participant in the evolving urban fabric.",
-      "cover": "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1800&q=88",
+       "cover": "/photos/project-2/Screenshot 2026-11-11 at 3.32.40 pm.png",
       "theme": {"background":"#1d2745","surface":"#2f3b62","text":"#fff8e8","accent":"#ff6a3d","style":"bold"},
       "sections": {
         "process":{"label":"Process Work","text":"Add Project Two process notes here.","images":[{"src":"https://images.unsplash.com/photo-1558171813-4c088753af8f?auto=format&fit=crop&w=1200&q=85","caption":"Process Study 01","alt":"Project two process work"}]},
