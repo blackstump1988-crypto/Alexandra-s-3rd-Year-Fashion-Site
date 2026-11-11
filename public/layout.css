@@ -1,20 +1,21 @@
-/* Compact overlapping contact sheet. Replaces only public/layout.css. */
-.gallery{display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;gap:0!important;align-items:center;padding:12px 0 30px!important;overflow:visible!important;isolation:isolate;max-width:1100px;margin:0 auto}
-.gallery button,.gallery button:nth-child(n){position:relative!important;display:block!important;grid-column:span 3!important;height:auto!important;min-height:0!important;aspect-ratio:4/5!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;overflow:visible!important;z-index:1;opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .75s ease}
+/* Ultra-compact layered fashion contact sheet. No changes to gallery data or full-screen viewer. */
+.gallery{display:grid!important;grid-template-columns:repeat(16,minmax(0,1fr))!important;column-gap:0!important;row-gap:0!important;align-items:center;max-width:1150px;margin:0 auto;padding:10px 0 28px!important;overflow:visible!important;isolation:isolate}
+.gallery button,.gallery button:nth-child(n){position:relative!important;display:block!important;grid-column:span 3!important;min-height:0!important;height:auto!important;aspect-ratio:4/5!important;padding:0!important;margin:0!important;border:0!important;background:transparent!important;overflow:visible!important;opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .7s ease;z-index:1}
 .gallery button.in-view{opacity:1;transform:translateY(0)}
-/* Four images per row with controlled overlapping and staggered positions. */
-.gallery button:nth-child(8n+1){grid-column:1/span 3!important;z-index:2}
-.gallery button:nth-child(8n+2){grid-column:3/span 3!important;margin-top:12%!important;z-index:4}
-.gallery button:nth-child(8n+3){grid-column:6/span 3!important;margin-top:-10%!important;z-index:3}
-.gallery button:nth-child(8n+4){grid-column:9/span 3!important;margin-top:8%!important;z-index:5}
-.gallery button:nth-child(8n+5){grid-column:2/span 3!important;margin-top:-25%!important;z-index:4}
-.gallery button:nth-child(8n+6){grid-column:4/span 3!important;margin-top:-12%!important;z-index:6}
-.gallery button:nth-child(8n+7){grid-column:7/span 3!important;margin-top:-25%!important;z-index:3}
-.gallery button:nth-child(8n){grid-column:10/span 3!important;margin-top:-12%!important;z-index:5}
-.gallery button img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:contain!important;filter:drop-shadow(0 6px 9px rgba(0,0,0,.14));transition:transform .45s ease}
-.gallery button:hover{z-index:20!important}.gallery button:hover img{transform:scale(1.06)}
-body[data-section="process"] .gallery button:nth-child(5n+1) img{-webkit-mask-image:radial-gradient(ellipse 80% 82% at center,#000 75%,transparent 100%);mask-image:radial-gradient(ellipse 80% 82% at center,#000 75%,transparent 100%)}
+/* Each item occupies a compact grid row. Offset columns and negative margins create overlapping layers. */
+.gallery button:nth-child(8n+1){grid-column:1/span 4!important;z-index:2}
+.gallery button:nth-child(8n+2){grid-column:4/span 3!important;margin-top:-25%!important;z-index:5}
+.gallery button:nth-child(8n+3){grid-column:7/span 3!important;margin-top:-40%!important;z-index:3}
+.gallery button:nth-child(8n+4){grid-column:10/span 4!important;margin-top:-24%!important;z-index:4}
+.gallery button:nth-child(8n+5){grid-column:13/span 3!important;margin-top:-40%!important;z-index:6}
+.gallery button:nth-child(8n+6){grid-column:2/span 3!important;margin-top:-45%!important;z-index:5}
+.gallery button:nth-child(8n+7){grid-column:6/span 4!important;margin-top:-50%!important;z-index:4}
+.gallery button:nth-child(8n){grid-column:11/span 4!important;margin-top:-46%!important;z-index:7}
+.gallery button img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:contain!important;filter:drop-shadow(0 5px 8px rgba(0,0,0,.16));transition:transform .5s ease}
+.gallery button:hover{z-index:30!important}.gallery button:hover img{transform:scale(1.08)}
+body[data-section="process"] .gallery button:nth-child(5n+1) img{-webkit-mask-image:radial-gradient(ellipse 83% 85% at center,#000 76%,transparent 100%);mask-image:radial-gradient(ellipse 83% 85% at center,#000 76%,transparent 100%)}
 body[data-section="illustrations"] .gallery img{-webkit-mask-image:none!important;mask-image:none!important}
-.gallery .caption{z-index:8;background:var(--bg,#f1eee7);color:var(--text,#171717);font-size:9px;padding:6px 9px}
-@media(max-width:700px){.gallery{grid-template-columns:repeat(6,minmax(0,1fr))!important}.gallery button:nth-child(n){grid-column:span 3!important;aspect-ratio:4/5!important;margin:0!important}.gallery button:nth-child(odd){grid-column:1/span 3!important}.gallery button:nth-child(even){grid-column:4/span 3!important;margin-top:12%!important}}
+.gallery .caption{z-index:8;background:var(--bg,#f1eee7);color:var(--text,#171717);font-size:8px;padding:5px 7px}
+@media(max-width:850px){.gallery{grid-template-columns:repeat(10,minmax(0,1fr))!important}.gallery button:nth-child(n){grid-column:span 4!important;margin:0!important}.gallery button:nth-child(odd){grid-column:1/span 5!important}.gallery button:nth-child(even){grid-column:5/span 5!important;margin-top:-30%!important}}
+@media(max-width:480px){.gallery{grid-template-columns:repeat(8,minmax(0,1fr))!important}.gallery button:nth-child(n){grid-column:1/span 5!important;margin:0!important}.gallery button:nth-child(even){grid-column:4/span 5!important;margin-top:-18%!important}}
 @media(prefers-reduced-motion:reduce){.gallery button:nth-child(n){opacity:1!important;transform:none!important;transition:none!important}.gallery img{transition:none!important}}

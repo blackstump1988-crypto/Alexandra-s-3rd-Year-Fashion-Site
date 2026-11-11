@@ -1,0 +1,15 @@
+/* Individual project treatments. Loaded AFTER layout.css. */
+body[data-project="project-1"] .gallery button:nth-child(4n+2).in-view{transform:rotate(-4deg)}
+body[data-project="project-1"] .gallery button:nth-child(4n+3).in-view{transform:rotate(3deg)}
+body[data-project="project-1"] .gallery img{filter:grayscale(.08) drop-shadow(6px 7px 6px #0003)}
+body[data-project="project-1"] .section-header h1{font-style:italic}
+body[data-project="project-2"] .gallery button:nth-child(odd){outline:3px solid var(--accent,#ff6a3d);outline-offset:-3px}
+body[data-project="project-2"] .section-header h1,body[data-project="project-2"] .project-hero h1{font-family:Arial,sans-serif;font-weight:900;text-transform:uppercase}
+body[data-project="project-3"] .gallery button:nth-child(3n+1).in-view{transform:rotate(-2deg)}
+body[data-project="project-3"] .gallery button:nth-child(3n+2).in-view{transform:rotate(2deg)}
+body[data-project="project-3"] .gallery img{filter:sepia(.07) drop-shadow(0 6px 10px #0002)}
+body[data-project="project-3"] .section-header h1{font-style:italic}
+body[data-project="project-4"] .gallery button{outline:1px solid color-mix(in srgb,var(--text) 30%,transparent);outline-offset:2px}
+body[data-project="project-4"] .section-header h1,body[data-project="project-4"] .project-hero h1{font-family:Arial,sans-serif;font-weight:300;text-transform:uppercase;letter-spacing:.02em}
+body[data-section="illustrations"] .gallery img{-webkit-mask-image:none!important;mask-image:none!important;object-fit:contain!important}
+@media(prefers-reduced-motion:reduce){body[data-project] .gallery button.in-view{transform:none!important}}
