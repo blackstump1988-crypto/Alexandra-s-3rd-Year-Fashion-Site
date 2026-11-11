@@ -40,7 +40,7 @@
     },
     {
       "id": "project-4", "number": "04", "title": "Tumble Forms", "subtitle": "Body Form Capsule Collection", "description": "This project explored the direct relationship between the human form, anatomical structure, materials, and garment construction. Moving beyond flat patternmaking, the designer draped, manipulated, pleated, and sculpted fabric directly on the body and dress form, drawing on skills developed in patternmaking and construction, body mapping, and constructed textiles. The result is an experimental capsule of works that tests physical volume, silhouette, and tactile qualities.",
-      "cover": "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=88",
+      "cover": "/photos/project-4/photoshoot/IMG_2961.jpg",
       "theme": {"background":"#101010","surface":"#262626","text":"#f4f4f1","accent":"#d8ff35","style":"minimal"},
       "sections": {
         "process":{"label":"Process Work","text":"Add Project Four process notes here.","images":[{"src":"https://images.unsplash.com/photo-1558171813-4c088753af8f?auto=format&fit=crop&w=1200&q=85","caption":"Process Study 01","alt":"Project four process work"}]},
